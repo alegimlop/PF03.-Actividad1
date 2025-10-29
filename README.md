@@ -1,0 +1,1 @@
+Implementación de los tests, en TDD con node, para pasar las pruebas en las respectivas funciones previamente propuestas en la actividad. Crearemos un proyecto para que se realice un PR a master que pase los test y se integrarán los cambios si los test han pasado.
