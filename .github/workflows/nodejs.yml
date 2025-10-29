@@ -2,29 +2,25 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ main, development ]
+    branches: [ develop]
   pull_request:
-    branches: [ main, development ]
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [18.x, 20.x]
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js 20
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: '20'
+          cache: 'npm'
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install dependencies (lockfile)
+        run: npm ci
 
       - name: Run tests
         run: npm test
