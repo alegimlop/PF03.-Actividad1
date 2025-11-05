@@ -2,10 +2,9 @@
   "name": "pf03.-actividad1",
   "version": "1.0.0",
   "description": "",
-  "main": "fibonacci.js",
+  "main": "index.js",
   "scripts": {
-    "test": "vitest run",
-    "test:watch": "vitest"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
