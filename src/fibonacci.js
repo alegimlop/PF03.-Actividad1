@@ -8,4 +8,3 @@ const fibonacci = n => {
 export{
   fibonacci
 }
-
