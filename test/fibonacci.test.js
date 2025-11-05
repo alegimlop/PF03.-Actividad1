@@ -5,7 +5,7 @@ describe('calcular fibonacci', () => {
   
   it('n < 0', () => {
     expect(() => fibonacci(-1)).toThrow(RangeError)
-    expect(() => fibonacci(-5)).toThrow("solo números enteros ≥ 0")
+    expect(() => fibonacci(-5)).toThrow("solo números enteros >= 0")
   })
 
   it('n = 0', () => {

@@ -1,21 +1,9 @@
-function fibonacci(n) {
-  if (n < 0) {
-    throw new RangeError("solo números enteros ≥ 0")
-  }
-
-  if (n === 0) return 0
-  if (n === 1) return 1
-
-  let a = 0, b = 1, temp
-
-  for (let i = 2; i <= n; i++) {
-    temp = a + b
-    a = b
-    b = temp
-  }
-
-  return b
-}
+const fibonacci = n => {
+  if (n < 0) throw new RangeError("solo números enteros >= 0");
+  let [a, b] = [0, 1];
+  while (n--) [a, b] = [b, a + b];
+  return a;
+};
 
 export{
   fibonacci
